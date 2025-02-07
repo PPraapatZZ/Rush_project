@@ -7,7 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 body {
     display: flex;
     justify-content: center;
@@ -17,7 +16,6 @@ body {
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
 }
-
 
 @keyframes gradientBG {
     0% {
@@ -33,53 +31,74 @@ body {
 
 .container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     max-width: 600px;
 }
 
+/* Header */
 h1 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
     color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
+/* Card Container */
 .card-container {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
 }
 
+/* Card Design */
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     text-align: center;
-    width: 200px;
-}
-
-.card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    width: 220px;
+    position: relative;
+    overflow: hidden;
 }
 
 .card h2 {
-    font-size: 18px;
+    font-size: 20px;
     color: #444;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+/* เพิ่มไอคอน */
+.card .icon {
+    font-size: 50px;
+    color: #4facfe;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
 }
 
+/* เอฟเฟกต์เมื่อ Hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.card:hover .icon {
+    color: white;
+}
+
+.card:hover h2 {
+    color: white;
+}
+
+/* Responsive Design */
 @media (max-width: 600px) {
     .card-container {
         flex-direction: column;
